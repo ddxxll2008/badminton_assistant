@@ -1,0 +1,5 @@
+<template name="foot">
+<view class="page-foot">
+    <view class="page-foot-title">欢迎加QQ:3413922510</view>
+  </view>
+</template>

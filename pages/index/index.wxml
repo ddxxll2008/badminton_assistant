@@ -1,0 +1,20 @@
+<!--pages/index/index.wxml-->
+<view class='container'>
+  <view class="page-body">
+    <view class="page_bd_spacing">
+      <view class="weui-flex" style="display:flex flex-direction:row; margin:20px; margin-top: 100px">
+        <view class="weui-flex__item">
+          <view id="playground" class="placeholder" bindtap="onGotoPage" style="background-color: #09bb07">全场步伐</view>
+        </view>
+        <view class="weui-flex__item">
+          <view id="launch" class="placeholder" bindtap="onGotoPage" style="background-color: #576b95">启动步伐</view>
+        </view>
+      </view>
+
+      <view class='flash-container'>
+        <text class='flash-text' animation="{{flashAnimation}}" style='opacity: 0'>拼尽全力</text>
+        <text class='flash-text' animation="{{flashAnimation}}" style='opacity: 0'>才配说此生无悔</text>
+      </view>
+    </view>
+  </view>
+</view>

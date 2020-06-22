@@ -1,0 +1,15 @@
+/* pages/playground/playground.wxss */
+@import "../common/lib/weui.wxss";
+
+.canvas {
+  width: 305px;
+  height: 335px;
+  background-color: #09bb07;
+}
+.picker{
+  padding: 19rpx 26rpx;
+  background-color: #FFFFFF;
+}
+.audio{
+  display: none
+}

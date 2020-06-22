@@ -1,0 +1,59 @@
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: '全场步伐练习'}}" />
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <canvas canvas-id="canvas" class="canvas"></canvas>
+    </view>
+
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">播放声音</view>
+          <view class="weui-cell__ft">
+            <switch bindchange="switchPlayAudioChange" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">速度设置</view>
+          </view>
+          <view class="weui-cell__bd">
+            <slider bindchange="durationChange" bindchanging='timeShowChange' min="100" max="500" step='10' value='300' />
+          </view>
+          <text style='width: 50px'>{{timeShow}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">选择类型</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="typePickerChange" value="{{typeIndex}}" range="{{typeArray}}">
+            <view class="weui-input">{{typeArray[typeIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+
+  <ad unit-id="adunit-00c08d2abeec6394"></ad>
+
+  <view class='audio'>
+    <audio src="{{current.src}}" bindplay="audioPlayed" action="{{audioAction}}" controls></audio>
+  </view>
+
+</view>
