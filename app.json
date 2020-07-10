@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/strings/strings",
     "pages/index/index",
     "pages/playground/playground",
     "pages/launch/launch"

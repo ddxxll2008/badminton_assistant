@@ -32,6 +32,9 @@ App({
         }
       }
     })
+    wx.cloud.init({
+      env: 'badminton-d2a418'
+    })
   },
   globalData: {
     userInfo: null
